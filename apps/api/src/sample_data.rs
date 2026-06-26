@@ -1,0 +1,51 @@
+use crate::models::{BookRecord, BookStatus};
+
+pub fn sample_books() -> Vec<BookRecord> {
+    vec![
+        BookRecord {
+            id: "book-1".to_owned(),
+            title: "星河渡口".to_owned(),
+            author: "白露".to_owned(),
+            description: "一部以边境港站为舞台的太空冒险长篇。".to_owned(),
+            epub_available: false,
+            epub_path: None,
+            identifier: Some("demo-book-1".to_owned()),
+            status: BookStatus::Published,
+            language: "zh-CN".to_owned(),
+            tags: vec!["科幻".to_owned(), "成长".to_owned()],
+            updated_at: "2026-06-20".to_owned(),
+            chapters: 42,
+            word_count: 386_000,
+        },
+        BookRecord {
+            id: "book-2".to_owned(),
+            title: "Mosslight Archive".to_owned(),
+            author: "Iris North".to_owned(),
+            description: "A serialized mystery unfolding inside a botanical library.".to_owned(),
+            epub_available: false,
+            epub_path: None,
+            identifier: Some("demo-book-2".to_owned()),
+            status: BookStatus::Review,
+            language: "en".to_owned(),
+            tags: vec!["Mystery".to_owned(), "Library".to_owned()],
+            updated_at: "2026-06-18".to_owned(),
+            chapters: 18,
+            word_count: 129_400,
+        },
+        BookRecord {
+            id: "book-3".to_owned(),
+            title: "风暴之前的书页".to_owned(),
+            author: "周汐".to_owned(),
+            description: "面向作者工作台的草稿样本，用于演示章节与字数管理。".to_owned(),
+            epub_available: false,
+            epub_path: None,
+            identifier: None,
+            status: BookStatus::Draft,
+            language: "zh-CN".to_owned(),
+            tags: vec!["都市".to_owned(), "连载".to_owned()],
+            updated_at: "2026-06-24".to_owned(),
+            chapters: 9,
+            word_count: 51_300,
+        },
+    ]
+}
