@@ -1,0 +1,14 @@
+services:
+  liteyuki-shelf:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_IMAGE: ${NODE_IMAGE-docker.m.daocloud.io/library/node:22-bookworm}
+        RUST_IMAGE: ${RUST_IMAGE-docker.m.daocloud.io/library/rust:1.96-bookworm}
+        RUNTIME_IMAGE: ${RUNTIME_IMAGE-docker.m.daocloud.io/library/debian:bookworm-slim}
+    ports:
+      - "8899:8899"
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "8899"
