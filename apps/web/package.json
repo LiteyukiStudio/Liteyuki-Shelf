@@ -1,0 +1,33 @@
+{
+  "name": "@liteyuki-shelf/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@liteyuki-shelf/shared": "workspace:*",
+    "i18next": "26.3.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-i18next": "16.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.31.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react": "5.0.3",
+    "eslint": "9.31.0",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.20",
+    "globals": "16.3.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.37.0",
+    "vite": "7.1.3"
+  }
+}

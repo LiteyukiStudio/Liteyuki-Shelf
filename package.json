@@ -1,0 +1,19 @@
+{
+  "name": "liteyuki-shelf",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.5.3",
+  "scripts": {
+    "dev": "pwsh -File scripts/dev-desktop.ps1",
+    "dev:desktop": "pwsh -File scripts/dev-desktop.ps1",
+    "dev:web": "pnpm --filter @liteyuki-shelf/web dev",
+    "dev:api": "cargo run --manifest-path apps/api/Cargo.toml",
+    "dev:tauri": "pwsh -File scripts/dev-tauri.ps1",
+    "build:web": "pnpm --filter @liteyuki-shelf/web build",
+    "lint:web": "pnpm --filter @liteyuki-shelf/web lint",
+    "check:web": "pnpm --filter @liteyuki-shelf/web typecheck",
+    "fmt:rust": "cargo fmt --all -- --check",
+    "check:rust": "cargo check --workspace",
+    "check": "pnpm lint:web && pnpm check:web && cargo check --workspace"
+  }
+}
